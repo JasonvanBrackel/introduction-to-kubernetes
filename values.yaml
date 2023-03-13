@@ -1,0 +1,87 @@
+admin: # https://hobbyfarm.github.io/docs/appendix/helm_options/#admin-ui-options
+  image: hobbyfarm/admin-ui:v2.0.1
+  configMapName: admin-config
+  config:
+    title: HobbyFarm Administration
+    favicon: /assets/default/favicon.png
+    logo: /assets/default/logo.svg
+    login:
+      logo: /assets/default/rancher-labs-stacked-color.svg
+      background: /assets/default/vault.jpg
+gargantua: # https://hobbyfarm.github.io/docs/appendix/helm_options/#gargantua
+  apiPort: 80
+  dynamicBaseNamePrefix: dynamic
+  image: hobbyfarm/gargantua:v2.0.3
+  logLevel: "0"
+  scheduledBaseNamePrefix: scheduled
+  serviceAccountName: hobbyfarm-gargantua
+  webhook:
+    containerPort: 444
+    servicePort: 443
+#guac: # https://hobbyfarm.github.io/docs/appendix/helm_options/#guacamole
+#  image: guacamole/guacamole:1.5.0
+ingress: # https://hobbyfarm.github.io/docs/appendix/helm_options/#ingress
+  annotations: {}
+  className: ""
+  enabled: true
+  hostnames:
+    backend: api.127.0.0.1.nip.io
+    admin:  admin.127.0.0.1.nip.io
+    shell: shell.127.0.0.1.nip.io
+    ui:  learn.127.0.0.1.nip.io
+    ranchervm: {}
+  tls:
+    enabled: false
+    backend: api.127.0.0.1.nip.io
+    admin:  admin.127.0.0.1.nip.io
+    shell: shell.127.0.0.1.nip.io
+    ui:  learn.127.0.0.1.nip.io
+    secrets:
+      backend:    backend-tls-secret  
+      admin:      admin-tls-secret    
+      ui:         ui-tls-secret       
+      shell:      shell-tls-secret
+
+insecure: true
+shell: # https://hobbyfarm.github.io/docs/appendix/helm_options/#shell
+  replicas: 1
+ui: # https://hobbyfarm.github.io/docs/appendix/helm_options/#ui-options
+  image: hobbyfarm/ui:v2.0.1
+  configMapName: ui-config
+  config:
+    title: HobbyFarm Learn
+    favicon: /assets/default/favicon.png
+    logo: /assets/default/logo.svg
+    login:
+      logo: /assets/default/rancher-labs-stacked-color.svg
+      background: /assets/default/login_container_farm.svg
+  about:
+    title: About HobbyFarm
+    body: 'HobbyFarm is a browser-based technology training tool developed at github.com/hobbyfarm'
+    # About Buttons and custom css are supported as well.
+    # See: https://hobbyfarm.github.io/docs/appendix/helm_options/#uiconfigaboutbuttons
+    # And: https://hobbyfarm.github.io/docs/appendix/helm_options/#uiconfigcustom
+users:
+  admin:
+    enabled: false
+    password: $2a$10$Zs0GUohdb0Ze3csUJZn.1OYFqnIXi0u1XZ06VzBB9hblD7QFIoQn6
+# Deprecated See https://hobbyfarm.github.io/docs/appendix/helm_options/#ranchervm
+ranchervm:
+  bridge: en0
+  enabled: false
+  image:
+    frontend: rancher/vm-frontend:v0.2.0
+    novnc: rancher/vm-novnc:v0.2.0
+    tools: rancher/vm-tools:v0.2.0
+    vm: rancher/vm:v0.2.0
+  nic: eth0
+# Deprecated See https://hobbyfarm.github.io/docs/appendix/helm_options/#terraform
+terraform:
+  controller:
+    image: rancher/terraform-controller
+    tag: v0.0.13-alpha1
+    threads: 2
+  enabled: false
+  executor:
+    image: rancher/terraform-controller-executor
+    tag: v0.0.13-alpha1
