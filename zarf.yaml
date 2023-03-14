@@ -9,10 +9,10 @@ components:
       - name: hobbyfarm-install-clusterrole
         namespace: hobbyfarm-system
         files:
-          - manifests/hobbyfarm-install-clusterrole.yaml # Optional cluster roles for hardened clusters. Example assumes ClusterAdmin by default. 
-          - manifests/admin-user.yaml
-          - manifests/hobbyfarm-admin-role.yaml
-          - manifests/hobbyfarm-admin-rolebinding.yaml
+          - manifests/auth/hobbyfarm-install-clusterrole.yaml # Optional cluster roles for hardened clusters. Example assumes ClusterAdmin by default. 
+          - manifests/auth/admin-user.yaml
+          - manifests/auth/hobbyfarm-admin-role.yaml
+          - manifests/auth/hobbyfarm-admin-rolebinding.yaml
     charts:
       - name: hobbyfarm
         url:  https://hobbyfarm.github.io/hobbyfarm
