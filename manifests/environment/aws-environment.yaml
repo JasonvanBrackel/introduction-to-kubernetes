@@ -1,0 +1,24 @@
+apiVersion: hobbyfarm.io/v1
+kind: Environment
+metadata:
+    name: aws-environment
+    namespace: hobbyfarm
+spec:
+    count_capacity:
+        ubuntu-22-lts-amd64: 50
+    display_name: Amazon Web Services, EC2
+    environment_specifics:
+        cred_secret: aws-environment-creds
+        region: us-east-1
+        subnet: subnet-09823djk
+        vpc_security_group_id: sg-09823iwedlijqd39
+    provider: aws
+    template_mapping:
+        ubuntu-22-lts-amd64:
+            image: ami-0557a15b87f6559cf
+            size: t2.micro
+    # ws_endpoint: ws.your-hobbyfarm.io
+
+    # IAC TODO
+    # - Create a Subnet
+    # - Create a VPC

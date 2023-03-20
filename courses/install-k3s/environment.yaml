@@ -1,0 +1,39 @@
+apiVersion: v1
+items:
+- apiVersion: hobbyfarm.io/v1
+  kind: Environment
+  metadata:
+    annotations:
+      hobbyfarm.io/provisioner: external
+    generation: 7
+    name: env-dyhpplexmd
+    namespace: hobbyfarm
+  spec:
+    burst_capable: true
+    burst_capacity:
+      cpu: 0
+      memory: 0
+      storage: 0
+    burst_count_capacity: null
+    capacity:
+      cpu: 0
+      memory: 0
+      storage: 0
+    capacity_mode: count
+    count_capacity:
+      vmt-wvjgql5nom: 50
+    display_name: aws-ubuntu-small
+    dnssuffix: ""
+    environment_specifics:
+      cred_secret: aws-secret
+      region: us-east-1
+      subnet: subnet-02c2a07b269deb37d
+      vpc_security_group_id: sg-0efb019a94b12eb1a
+    ip_translation_map: {}
+    provider: aws
+    template_mapping:
+      vmt-wvjgql5nom:
+        image: ami-0557a15b87f6559cf
+        size: t2.medium
+    ws_endpoint: shell.127.0.0.1.nip.io
+kind: List

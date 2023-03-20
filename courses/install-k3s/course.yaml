@@ -1,0 +1,24 @@
+apiVersion: v1
+items:
+- apiVersion: hobbyfarm.io/v1
+  kind: Course
+  metadata:
+    creationTimestamp: "2023-03-16T19:55:40Z"
+    generation: 4
+    name: c-cne7rxqlyp
+    namespace: hobbyfarm
+    resourceVersion: "47342"
+    uid: ad78da35-6cdb-405b-b1fe-ad480c6d458a
+  spec:
+    description: U2hvdWxkIGluc3RhbGwgazNz
+    id: c-cne7rxqlyp
+    keep_vm: true
+    keepalive_duration: 10m
+    name: aW5zdGFsbCBrM3M=
+    pause_duration: 2h
+    pauseable: true
+    scenarios:
+    - s-lcpt4ubhed
+    virtualmachines:
+    - small: vmt-wvjgql5nom
+kind: List

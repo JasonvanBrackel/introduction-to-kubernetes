@@ -1,0 +1,11 @@
+apiVersion: hobbyfarm.io/v1
+kind: VirtualMachineTemplate
+metadata:
+    name: ubuntu-22-lts-amd64
+    namespace: hobbyfarm
+spec:
+    id: ubuntu-22-lts-amd64
+    name: Canonical, Ubuntu, 22.04 LTS, amd64 jammy image build on 2023-02-08
+    image: ami-0557a15b87f6559cf
+    config_map: 
+      key: value

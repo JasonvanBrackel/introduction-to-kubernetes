@@ -1,0 +1,26 @@
+apiVersion: hobbyfarm.io/v1
+kind: Scenario
+metadata:
+  labels:
+    category-k3s: "true"
+  name: s-lcpt4ubhed
+  namespace: hobbyfarm
+spec:
+  categories:
+  - k3s
+  description: TGVhcm4gdG8gSW5zdGFsbCBLM3M=
+  id: s-lcpt4ubhed
+  keepalive_duration: 10m
+  name: aW5zdGFsbC1rM3M=
+  pause_duration: 1h
+  pauseable: false
+  steps:
+  - content: SW4gdGhpcyBzdGVwLCB5b3Ugd2lsbCBpbnN0YWxsIEszcyBvbiBhIHZpcnR1YWwgbWFjaGluZS4KClJ1biB0aGUgZm9sbG93aW5nIGNvbW1hbmQgdG8gaW5zdGFsbCBLM3M6CgpgYGAKY3VybCAtc2ZMIGh0dHBzOi8vZ2V0Lmszcy5pbyB8IHNoIC0KYGBgCgpXYWl0IGZvciB0aGUgaW5zdGFsbGF0aW9uIHRvIGNvbXBsZXRlLg==
+    title: SW5zdGFsbCBLM3M=
+  - content: Tm93LCB2ZXJpZnkgdGhhdCBLM3MgaXMgaW5zdGFsbGVkIGFuZCBydW5uaW5nIGNvcnJlY3RseS4KClJ1biB0aGUgZm9sbG93aW5nIGNvbW1hbmQgdG8gY2hlY2sgdGhlIHN0YXR1cyBvZiBLM3M6CgpgYGAKc3VkbyBrM3Mga3ViZWN0bCBnZXQgbm9kZXMKYGBgCgpZb3Ugc2hvdWxkIHNlZSBhIHNpbmdsZSBub2RlIHdpdGggYSBgUmVhZHlgIHN0YXR1cy4=
+    title: Q2hlY2sgSzNzIGlzIHJ1bm5pbmc=
+  - content: SW4gdGhpcyBzdGVwLCB5b3Ugd2lsbCBjcmVhdGUgYSBzaW1wbGUgZGVwbG95bWVudCB1c2luZyBLM3MuCgpSdW4gdGhlIGZvbGxvd2luZyBjb21tYW5kIHRvIGNyZWF0ZSBhIGRlcGxveW1lbnQgd2l0aCB0aGUgYG5naW54YCBpbWFnZToKCmBgYApzdWRvIGszcyBrdWJlY3RsIGNyZWF0ZSBkZXBsb3ltZW50IG5naW54IC0taW1hZ2U9bmdpbngKYGBgCgpUbyB2ZXJpZnkgdGhhdCB0aGUgZGVwbG95bWVudCB3YXMgY3JlYXRlZCBzdWNjZXNzZnVsbHksIHJ1bjoKCmBgYApzdWRvIGszcyBrdWJlY3RsIGdldCBkZXBsb3ltZW50cwpgYGAKCllvdSBzaG91bGQgc2VlIHRoZSBgbmdpbnhgIGRlcGxveW1lbnQgd2l0aCBvbmUgcmVwbGljYS4=
+    title: RGVwbG95IG5naW54
+  tags: []
+  virtualmachines:
+  - ubuntu-small: vmt-wvjgql5nom

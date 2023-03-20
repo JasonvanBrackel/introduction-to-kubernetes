@@ -1,0 +1,15 @@
+apiVersion: hobbyfarm.io/v1
+kind: VirtualMachineTemplate
+metadata:
+  generation: 3
+  name: vmt-wvjgql5nom
+  namespace: hobbyfarm
+spec:
+  config_map: {}
+  id: vmt-wvjgql5nom
+  image: ami-0557a15b87f6559cf
+  name: small
+  resources:
+    cpu: 1
+    memory: 1024
+    storage: 5

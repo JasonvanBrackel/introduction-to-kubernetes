@@ -1,0 +1,16 @@
+apiVersion: hobbyfarm.io/v1
+kind: User
+metadata:
+  name: admin
+spec:
+  id: admin
+  email: admin
+  password: $2a$10$Zs0GUohdb0Ze3csUJZn.1OYFqnIXi0u1XZ06VzBB9hblD7QFIoQn6
+  admin: true
+  access_codes: 
+    - installk3s
+  settings:
+    ctr_enabled: "true"
+    ctxAccessCode: example-access-code
+    terminal_fontSize: "16"
+    terminal_theme: Solarized_Dark_Higher_Contrast

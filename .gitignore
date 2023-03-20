@@ -1,0 +1,12 @@
+# Zarf Packages
+*.tar.zst
+
+# Downloaded files
+manifests/equinix.cattle.io_importkeypairs.yaml
+manifests/equinix.cattle.io_instances.yaml
+manifests/importkeypair_crd.yaml
+manifests/instance_crd.yaml
+manifests/crd.yaml
+
+# JetBrains
+.idea/
